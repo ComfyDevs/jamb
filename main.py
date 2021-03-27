@@ -1,16 +1,20 @@
+import discord
 from discord.ext import commands
+import typing
+import random
+from PIL import Image
+import io
+import os
 
-class JAMB(commands.Bot):
-    token = "lmao learn d.py"
+bot = commands.Bot(command_prefix=["JAMB ","Jamb ","jamb "],description="Just Another Multipurpose Bot")
 
-bot = JAMB(command_prefix=["JAMB ","jamb ","Jamb "])
+exts = os.listdir("extensions")
+try:
+    exts.remove("__pycache__")
+except:
+    pass
 
-bot.remove_command("help")
+for ext in exts:
+    bot.load_extension("extensions."+ext.replace(".py",""))
 
-def loadExts(extlist):
-    for ext in extlist:
-        bot.load_extension("extensions."+ext)
-
-loadExts(["misc","help","owner"])
-
-bot.run(open("tok","r").read())
+bot.run("NzU3NTkwNzgxNzIzOTM0ODEw.X2inZQ.yWu1XDh-kjGu8bVRgv263qbiq4E")
