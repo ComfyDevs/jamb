@@ -17,4 +17,4 @@ except:
 for ext in exts:
     bot.load_extension("extensions."+ext.replace(".py",""))
 
-bot.run("NzU3NTkwNzgxNzIzOTM0ODEw.X2inZQ.yWu1XDh-kjGu8bVRgv263qbiq4E")
+bot.run("TOKEN")
